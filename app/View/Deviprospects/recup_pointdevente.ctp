@@ -1,0 +1,1 @@
+<?php echo $this->Form->input('pointdevente_id', array('div' => 'form-group','label'=>'', 'name' => 'data[Recherche][pointdevente_id]', 'table' => 'Recherche', 'id' => 'lapv', 'champ' => 'pointdevente_id', 'between' => '<div class="col-sm-12">', 'after' => '</div>', 'empty' => 'Veuillez Choisir !!')); ?>
