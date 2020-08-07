@@ -98,6 +98,8 @@ if ($p == 0) {
                     echo $this->Form->input('model', array('id' => 'model', 'type' => 'hidden', 'value' => 'Factureavoir', 'div' => 'form-group', 'readonly' => 'readonly', 'between' => '<div class="col-sm-10">', 'after' => '</div>', 'class' => 'form-control inputspcial'));
                     echo $this->Form->input('date', array('div' => 'form-group', 'value' => date("d/m/Y", strtotime(str_replace('-', '/', $this->request->data['Factureavoir']['date']))), 'type' => 'text', 'between' => '<div class="col-sm-10">', 'after' => '</div>', 'class' => 'form-control datePickerOnly inputspcial'));
                     echo $this->Form->input('numero', array('id' => 'numero', 'div' => 'form-group', 'between' => '<div class="col-sm-8">', 'after' => '</div>', 'class' => 'form-control inputspcial'));
+                    echo $this->Form->input('remarque', array('label'=>'Remarque','type'=>'textarea','id' => 'remarque',  'div' => 'form-group', 'between' => '<div class="col-sm-10">', 'after' => '</div>', 'class' => 'form-control inputspcial'));
+
                     ?>
                     
                 </div>

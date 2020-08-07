@@ -250,7 +250,6 @@ $zone = $ModelSociete->find('first',array('conditions'=>array('Zone.id'=>$factur
             <td align="center" style="width: 7%;border: 1px solid black;background-color:#b8b8b8;" ><strong>Qte</strong></td>
             <td align="center" style="width: 6%;border: 1px solid black;background-color:#b8b8b8;" ><strong>TVA</strong></td>
             <td align="center" style="width: 10%;border: 1px solid black;background-color:#b8b8b8;" ><strong>P.U.HT</strong></td>
-            <td align="center" style="width: 7%;border: 1px solid black;background-color:#b8b8b8;" ><strong>REM</strong></td>
             <td align="center" style="width: 10%;border: 1px solid black;background-color:#b8b8b8;" ><strong>TOTAL HT</strong></td>
             <td align="center" style="width: 10%;border: 1px solid black;background-color:#b8b8b8; border-radius: 0mm 3mm 0mm 0mm;-moz-border-radius: 1mm;" ><strong>P.U.TTC</strong></td>
         </tr>
@@ -275,7 +274,6 @@ $zone = $ModelSociete->find('first',array('conditions'=>array('Zone.id'=>$factur
                 <td align="center" style="width: 7%;border: 1px solid black;background-color:#b8b8b8;" ><strong>Qte</strong></td>
                 <td align="center" style="width: 6%;border: 1px solid black;background-color:#b8b8b8;" ><strong>TVA</strong></td>
                 <td align="center" style="width: 10%;border: 1px solid black;background-color:#b8b8b8;" ><strong>P.U.HT</strong></td>
-                <td align="center" style="width: 7%;border: 1px solid black;background-color:#b8b8b8;" ><strong>REM</strong></td>
                 <td align="center" style="width: 10%;border: 1px solid black;background-color:#b8b8b8;" ><strong>TOTAL HT</strong></td>
                 <td align="center" style="width: 10%;border: 1px solid black;background-color:#b8b8b8; border-radius: 0mm 3mm 0mm 0mm;-moz-border-radius: 1mm;" ><strong>P.U.TTC</strong></td>
                 </tr>
@@ -311,7 +309,6 @@ $zone = $ModelSociete->find('first',array('conditions'=>array('Zone.id'=>$factur
                 <td align="center" style="width: 7%;border: 1px solid black;background-color:#b8b8b8;" ><strong>Qte</strong></td>
                 <td align="center" style="width: 6%;border: 1px solid black;background-color:#b8b8b8;" ><strong>TVA</strong></td>
                 <td align="center" style="width: 10%;border: 1px solid black;background-color:#b8b8b8;" ><strong>P.U.HT</strong></td>
-                <td align="center" style="width: 7%;border: 1px solid black;background-color:#b8b8b8;" ><strong>REM</strong></td>
                 <td align="center" style="width: 10%;border: 1px solid black;background-color:#b8b8b8;" ><strong>TOTAL HT</strong></td>
                 <td align="center" style="width: 10%;border: 1px solid black;background-color:#b8b8b8; border-radius: 0mm 3mm 0mm 0mm;-moz-border-radius: 1mm;" ><strong>P.U.TTC</strong></td>
                 </tr>
@@ -363,7 +360,6 @@ $zone = $ModelSociete->find('first',array('conditions'=>array('Zone.id'=>$factur
             <tr>
                 <td  style="width: 14%;<?php echo $styl_cadr_bottom; ?>;height: <?php echo @$long; ?>mm; border-radius: 0mm 0mm 0mm 3mm;-moz-border-radius: 1mm;"></td>
                 <td  style="width: 36%;<?php echo $styl_cadr_bottom; ?>"></td>
-                <td  style="width: 7%;<?php echo $styl_cadr_bottom; ?>"></td>
                 <td  style="width: 6%;<?php echo $styl_cadr_bottom; ?>"></td>
                 <td  style="width: 10%;<?php echo $styl_cadr_bottom; ?>"></td>
                 <td  style="width: 7%;<?php echo $styl_cadr_bottom; ?>"></td>
@@ -444,10 +440,7 @@ $zone = $ModelSociete->find('first',array('conditions'=>array('Zone.id'=>$factur
                         <td align="left" style="width:50%;border-radius: 3mm 0mm 0mm 0mm;-moz-border-radius: 1mm;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Total HT  </strong></td>
                         <td align="right"  style="width:50%;border-radius: 0mm 3mm 0mm 0mm;-moz-border-radius: 1mm;"><?php echo number_format($factureclient[$model]['totalht'] + $factureclient[$model]['remise'], 3, '.', ' ');?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     </tr>
-                    <tr>
-                        <td align="left" style="width:50%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Total remise  </strong></td>
-                        <td align="right" style="width:50%;"><?php echo number_format($factureclient[$model]['remise'], 3, '.', ' ');?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                    </tr>
+                   
                     <tr>
                         <td align="left" style="width:50%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Total NET  </strong></td>
                         <td align="right"  style="width:50%;"><?php echo number_format($factureclient[$model]['totalht'], 3, '.', ' ');?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>

@@ -157,6 +157,7 @@
         <script>var wr = '<?php echo $this->webroot ?>';</script>
         <script src="<?php echo $this->webroot; ?>assets/js/jquery.min.js"></script>
         <script src="<?php echo $this->webroot; ?>assets/js/kinda.js"></script>
+        <script src="<?php echo $this->webroot; ?>assets/js/hela.js"></script>
         <script src="<?php echo $this->webroot; ?>assets/js/thermeco.js"></script>
         <script src="<?php echo $this->webroot; ?>assets/js/amine.js"></script>
         <script src="<?php echo $this->webroot; ?>assets/js/ali.js"></script>

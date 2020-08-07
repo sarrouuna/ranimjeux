@@ -43,13 +43,29 @@
 
 
 
+                    </div>	
+                        
+                <div class='form-group'>	
+                        <label class='col-md-2 control-label'><?php echo __('Remarque'); ?></label>	
+
+
+                        <div class='col-sm-10'><input type='text'  class='form-control' readonly='readonly' class='input' value='<?php echo h($devi['Devi']['remarque']);?>'>
+
+                        </div>
+
+
+
                     </div>		
-                </div> <div class="col-md-6">    
+             
+                
+            	
+                </div> 
+                 <div class="col-md-6">    
                     <div class='form-group'>	
                         <label class='col-md-2 control-label'><?php echo __('Numero'); ?></label>	
 
 
-                        <div class='col-sm-10'><input type='text'  class='form-control' readonly='readonly' class='input' value='<?php echo h($devi['Devi']['numero']); ?>'>
+                        <div class='col-sm-10'><input type='text'  class='form-control' readonly='readonly' class='input' value='<?php echo h($devi['Devi']['numero']);  ?>'>
 
                         </div>
 

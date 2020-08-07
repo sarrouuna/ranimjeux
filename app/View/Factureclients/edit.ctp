@@ -121,6 +121,8 @@ if ($model == 'Factureclient' || $model == 'Bonlivraison') {
                     echo $this->Form->input('date', array('div' => 'form-group', 'value' => $date, 'type' => 'text', 'between' => '<div class="col-sm-10">', 'after' => '</div>', 'class' => 'form-control datePickerOnly inputspcial'));
                     //echo $this->Form->input('numero', array('readonly' => $readonly, 'id' => 'numero', 'div' => 'form-group', 'between' => '<div class="col-sm-10">', 'after' => '</div>', 'class' => 'form-control inputspcial'));
                     echo $this->Form->input('numero', array( 'id' => 'numero', 'div' => 'form-group', 'between' => '<div class="col-sm-8">', 'after' => '</div>', 'class' => 'form-control inputspcial'));
+                    echo $this->Form->input('remarque', array('label'=>'Remarque','type'=>'textarea','id' => 'remarque',  'div' => 'form-group', 'between' => '<div class="col-sm-10">', 'after' => '</div>', 'class' => 'form-control inputspcial'));
+
                     ?>
                     
                 </div>
@@ -287,15 +289,20 @@ if ($model == 'Factureclient' || $model == 'Bonlivraison') {
                                 <?php echo $this->Form->input('sup', array('name' => '', 'id' => '', 'champ' => 'sup', 'table' => $tablesemi, 'index' => '', 'div' => 'form-group', 'between' => '<div class="col-sm-10">', 'after' => '</div>', 'type' => 'hidden', 'class' => 'form', 'label' => '')); ?>
                                 <?php echo $this->Form->input('quantitestock', array('readonly' => 'readonly', 'label' => '', 'div' => 'form-group', 'name' => '', 'table' => $tablesemi, 'index' => '', 'id' => 'quantitestock', 'champ' => 'quantitestock', 'type' => 'text', 'between' => '<div class="col-sm-12">', 'after' => '</div>', 'class' => 'form-control')); ?>
                             </td>
-                            <td width="1%" id="" champ="tdaff" index="" >
+                            <td width="2%">
+                              <i index=""  class="fa fa-times supregg " style="color: #c9302c; font-size: 22px;"></i>
+                              <?php echo $this->Form->input('sup',array('name'=>'','label'=>'','index'=>'','id'=>'sup','table'=>$tablesemi,'champ'=>'sup','name'=>'','div'=>'form-group','between'=>'<div class="col-sm-12">','after'=>'</div>','type'=>'hidden') );?> 
+                          </td>
+                            <!-- <td width="1%" id="" champ="tdaff" index="" >
                                 <i index=""  class="fa fa-times supp1" style="color: #c9302c;font-size: 15px;"/>
-                            </td>
+                            </td> -->
 
                         </tr>
 
-                        <?php
-                        foreach ($lignefactureclients as $i => $l) {
-//                            debug($l);
+                        <?php  //debug($lignefactureclients);
+                        
+                        foreach ($lignefactureclients as $i => $l) { //debug($i);die;
+                       //  debug($l);die;
 //                            die;
                             $qtestock = 0;
                             $i = $i + 1;
@@ -425,9 +432,10 @@ if ($model == 'Factureclient' || $model == 'Bonlivraison') {
                                     ?>
 
                                 </td>
-                                <td width="1%" id="tdaff<?php echo $i; ?>" >
-                                    <i index="<?php echo $i; ?>"  class="fa fa-times supp1" style="color: #c9302c;font-size: 15px;"/>
-                                </td> 
+                                <td width="2%">
+                              <i index=""  class="fa fa-times supregg " style="color: #c9302c; font-size: 22px;"></i>
+                              <?php echo $this->Form->input('sup',array('index'=>$i,'name' => 'data[' . $tablesemi . '][' . $i . '][sup]','label'=>'','id' => 'sup' . $i,'table'=>$tablesemi,'champ'=>'sup','div'=>'form-group','between'=>'<div class="col-sm-12">','after'=>'</div>','type'=>'text') );?> 
+                          </td>
                             </tr>
 <?php } ?>
                     </tbody>

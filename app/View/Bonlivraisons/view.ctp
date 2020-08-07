@@ -33,7 +33,19 @@
 
 
 
-                    </div>			 
+                    </div>	
+
+                      
+                    <div class='form-group'>	
+                        <label class='col-md-2 control-label'><?php echo __('Remarque'); ?></label>	
+
+
+                        <div class='col-sm-10'><input type='text'  class='form-control' readonly='readonly' value='<?php echo $bonlivraison['Bonlivraison']['remarque']; ?>'>
+                        </div>
+
+
+
+                    </div>		 
                 </div><div class="col-md-6">  
                     <div class='form-group'>	
                         <label class='col-md-2 control-label'><?php echo __('Numero'); ?></label>	

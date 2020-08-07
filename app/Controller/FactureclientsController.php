@@ -1240,6 +1240,7 @@ class FactureclientsController extends AppController {
     }
 
     public function add($model = null, $ligne_model = null, $attribut = null,$facproforma= null) {
+        
         $lien = CakeSession::read('lien_vente');
         $x = "";
         //debug($lien);die;
@@ -1269,6 +1270,7 @@ class FactureclientsController extends AppController {
         $this->loadModel('Typedipliquation');
 
         if ($this->request->is('post')) {
+            // debug($this->request->data);die;
             //facture proforma
             if(!empty($facproforma)){
             $this->request->data['Devi']['proforma'] = 1;
@@ -3182,8 +3184,9 @@ class FactureclientsController extends AppController {
             //$this->request->ligne = $this->Lignefactureclient->find('first', $ligneoptions);
             //debug($this->request->ligne);
         }
-        $lignefactureclients = $this->$ligne_model->find('all', array('conditions' => array($ligne_model . '.' . $attribut => $id), 'order' => array($ligne_model . '.id' => 'ASC')));
-
+        $lignefactureclients = $this->$ligne_model->find('all', array('conditions' => 
+        array($ligne_model . '.' . $attribut => $id), 'order' => array($ligne_model . '.id' => 'ASC')));
+//debug($lignefactureclients);die;
         //$clients = $this->Client->find('list');
         $composantsoc = CakeSession::read('composantsoc');
         //$clients = $this->Client->find('list');

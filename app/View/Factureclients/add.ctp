@@ -112,6 +112,8 @@ if ($p == 0) {
                     echo $this->Form->input('model', array('id' => 'model', 'type' => 'hidden', 'value' => $model, 'div' => 'form-group', 'readonly' => 'readonly', 'between' => '<div class="col-sm-10">', 'after' => '</div>', 'class' => 'form-control inputspcial'));
                     echo $this->Form->input('date', array('div' => 'form-group', 'value' => date("d/m/Y"), 'type' => 'text', 'between' => '<div class="col-sm-10">', 'after' => '</div>', 'class' => 'form-control datePickerOnly inputspcial'));
                     echo $this->Form->input('numero', array( 'id' => 'numero', 'value' => $numspecial, 'div' => 'form-group', 'between' => '<div class="col-sm-8">', 'after' => '</div>', 'class' => 'form-control inputspcial'));
+                    echo $this->Form->input('remarque', array('label'=>'Remarque','type'=>'textarea','id' => 'remarque',  'div' => 'form-group', 'between' => '<div class="col-sm-10">', 'after' => '</div>', 'class' => 'form-control inputspcial'));
+
                     ?>
 
                 </div>
@@ -298,10 +300,13 @@ if ($p == 0) {
                                 <?php echo $this->Form->input('sup', array('name' => '', 'id' => '', 'champ' => 'sup', 'table' => $tablesemi, 'index' => '', 'div' => 'form-group', 'between' => '<div class="col-sm-10">', 'after' => '</div>', 'type' => 'hidden', 'class' => 'form', 'label' => '')); ?>
                                 <?php echo $this->Form->input('quantitestock', array('readonly' => 'readonly', 'label' => '', 'div' => 'form-group', 'name' => '', 'table' => $tablesemi, 'index' => '', 'id' => 'quantitestock', 'champ' => 'quantitestock', 'type' => 'text', 'between' => '<div class="col-sm-12">', 'after' => '</div>', 'class' => 'form-control')); ?>
                             </td>
-
-                            <td width="1%" id="" champ="tdaff" index="" >
+                            <td width="2%">
+                              <i index=""  class="fa fa-times supregg " style="color: #c9302c; font-size: 22px;"></i>
+                              <?php echo $this->Form->input('sup',array('name'=>'','label'=>'','index'=>'','id'=>'sup','table'=>$tablesemi,'champ'=>'sup','name'=>'','div'=>'form-group','between'=>'<div class="col-sm-12">','after'=>'</div>','type'=>'hidden') );?> 
+                          </td>
+                            <!-- <td width="1%" id="" champ="tdaff" index="" >
                                 <i index=""  class="fa fa-times supp1" style="color: #c9302c;font-size: 15px;"/>
-                            </td>
+                            </td> -->
 
                         </tr>
         <!--                <tr class="cc0 testclientvide" >
@@ -370,6 +375,11 @@ if ($p == 0) {
                             <i index="0"  class="fa fa-times supp1" style="color: #c9302c;font-size: 15px;"/>
                             </td>
                         </tr>-->
+
+                        <td width="2%">
+                              <i index=""  class="fa fa-times supregg " style="color: #c9302c; font-size: 22px;"></i>
+                              <?php echo $this->Form->input('sup',array('name'=>'','label'=>'','index'=>'','id'=>'sup','table'=>$tablesemi,'champ'=>'sup','name'=>'','div'=>'form-group','between'=>'<div class="col-sm-12">','after'=>'</div>','type'=>'hidden') );?> 
+                          </td>
                     </tbody>
                 </table>
 

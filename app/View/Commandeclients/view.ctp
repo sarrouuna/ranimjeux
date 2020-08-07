@@ -34,7 +34,20 @@
 
 
 
-                    </div>	</div><div class="col-md-6">     
+                    </div>	
+                    
+                    
+                    <div class='form-group'>	
+                        <label class='col-md-2 control-label'><?php echo __('Remarque'); ?></label>	
+
+
+                        <div class='col-sm-10'><input type='text'  class='form-control' readonly='readonly' value='<?php echo $commandeclient['Commandeclient']['remarque']; ?>'>
+                        </div>
+
+
+
+                    </div>
+                    </div><div class="col-md-6">     
                     <div class='form-group'>	
                         <label class='col-md-2 control-label'><?php echo __('Date'); ?></label>	
 

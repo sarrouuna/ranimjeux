@@ -122,6 +122,7 @@ if ($add == 1) {
                                 <th><?php echo ('Prix de vente HT'); ?></th>
 
                                 <th><?php echo ('Prix Achat Net'); ?></th>
+                                <th><?php echo ('Prix HT  Gros'); ?></th>
 
                                 <th class="actions" align="center"></th>
                             </tr></thead><tbody>
@@ -167,6 +168,8 @@ FROM (
 
                                     <td ><?php echo h($article['Article']['prixvente']); ?></td>
                                     <td ><?php echo h($article['Article']['coutrevient']); ?></td>
+                                    <td ><?php echo h($article['Article']['prixventegros']); ?></td>
+
                                     <td align="center">
                                         <?php echo $this->Html->link("<button class='btn btn-xs btn-success'><i class='fa fa-search'></i></button>", array('action' => 'view', $article['Article']['id']), array('escape' => false)); ?>
                                         <?php

@@ -2943,7 +2943,7 @@ function calculetotalecredit(index) {
 }
 function ajouter_ligne_livraison1(table, index) {
     ind = Number($('#' + index).val()) + 1;
-
+ 
     $ttr = $('#' + table).find('.tr').clone(true);
     //console.log($ttr);
     $ttr.attr('class', 'cc' + ind);
@@ -2969,17 +2969,17 @@ function ajouter_ligne_livraison1(table, index) {
 		if(yourid!=""){
         $(this).attr('yourid', yourid+ ind);
         }
-//        alert();
+
         if (page == 'suggestioncommande' || page == 'commande') {
             if (champ == 'tdaff') {
                 fournisseur_id = $('#fc').val();
                 //$(this).html("<span title='ajouter article'><a  onClick=flvFPW1(wr+'Deviprospects/recapajoutarticle?index="+ind+",'UPLOAD','width=800,height=1150,scrollbars=yes',0,2,2);return document.MM_returnValue' href='javascript:;' ><i class='fa fa-plus-circle'></i></a></span>");
-                $(this).html('<a onClick="modifierchamptestindex(' + ind + '),flvFPW1(\'' + wr + 'Deviprospects/recapajoutarticle/' + ind + '/achat\' ,\'UPLOAD\', \'width=1200,height=1150,scrollbars=yes\', 0, 2, 2 ); return document.MM_returnValue;" href=\'javascript:;\'  >  <i class=\'glyphicon glyphicon-plus modifierchamptestindex\' index=' + ind + ' style="color: #cc0000"></i></a>');
+$(this).html('<a onClick="modifierchamptestindex(' + ind + '),flvFPW1(\'' + wr + 'Deviprospects/recapajoutarticle' + ind + '/achat\' ,\'UPLOAD\', \'width=1200,height=1150,scrollbars=yes\', 0, 2, 2 ); return document.MM_returnValue;" href=\'javascript:;\'  >  <i class=\'glyphicon glyphicon-plus modifierchamptestindex\' index=' + ind + ' style="color: #cc0000"></i></a>');
                 //$(this).attr('onclick','recap_ajout_article('+ind+')')
             }
         }
         if (champ == 'nv-art') {
-                $(this).html('<a onClick="modifierchamptestindex(' + ind + '),flvFPW1(\'' + wr + 'Deviprospects/recapajoutarticle/' + ind  + '/vente\' ,\'UPLOAD\', \'width=1200,height=1150,scrollbars=yes\', 0, 2, 2 ); return document.MM_returnValue;" href=\'javascript:;\'  >  <i class=\'glyphicon glyphicon-plus modifierchamptestindex\' index=' + ind + ' style="color: #cc0000"></i></a>');
+                $(this).html('<a onClick="modifierchamptestindex(' + ind + '),flvFPW1(\'' + wr + 'Historiquearticles/view/' + ind  + '/vente\' ,\'UPLOAD\', \'width=1200,height=1150,scrollbars=yes\', 0, 2, 2 ); return document.MM_returnValue;" href=\'javascript:;\'  >  <i class=\'glyphicon glyphicon-plus modifierchamptestindex\' index=' + ind + ' style="color: #cc0000"></i></a>');
         }
         //*************************************************************************
         // if ((($(this).is('input')) || ($(this).is('select')))) {

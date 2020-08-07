@@ -46,6 +46,18 @@
 		
                                  
                             </div>
+
+                            <div class='form-group'>	
+                                 <label class='col-md-2 control-label'><?php echo __('Remaruqe'); ?></label>	
+                                  
+			
+                                  <div class='col-sm-10'><input type='text'  class='form-control' readonly='readonly' value='<?php echo $factureavoir['Factureavoir']['remarque']; ?>'>
+                                  </div>
+			
+		
+                                 
+                            </div>
+        
         </div>  
                                     
             <?php if($typefacture==1){ ?>                      
